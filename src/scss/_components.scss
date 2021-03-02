@@ -1,0 +1,444 @@
+.topbar {
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	background-color: $brand-blue;
+	height: auto;
+	z-index: 1001;
+	@include box-shadow;
+	@include media-breakpoint-up(md) {
+		height: $topbar-height;
+	}
+
+	&__logo {
+		padding-right: 0;
+		padding-left: 0;
+		@include media-breakpoint-up(lg) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+		&-wrapper {
+			display: block;
+			background-color: $brand-red;
+			padding: ms(-2) ms(1) ms(0);
+			text-decoration: none;
+			color: white;
+			border-bottom-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+			@include box-shadow;
+			@include media-breakpoint-up(md) {
+				display: inline-block;
+				vertical-align: top;
+        padding-right: ms(1);
+        padding-left: ms(1);
+      }
+			@include media-breakpoint-up(lg) {
+        padding-right: ms(3);
+        padding-left: ms(3);
+      }
+      &:hover {
+      	color: white;
+      	text-decoration: none;
+      }
+		}
+
+		h1 {
+			font-size: 1.3rem;
+			margin: 0 0 ms(-2);
+			font-weight: 400;
+			white-space: nowrap;
+			@include media-breakpoint-up(sm) {
+				font-size: ms(3);
+			}
+		}
+		p {
+			margin: 0;
+			&:not(:first-of-type) {
+				margin-top: ms(-4);
+			}
+		}
+		svg {
+			position: relative;
+			top: .2em;
+			width: 1.1em;
+			height: 1.1em;
+			opacity: .5;
+		}
+	}
+
+	&__nav {
+		text-align: center;
+		line-height: $topbar-height;
+		font-size: ms(2);
+		@include media-breakpoint-up(sm) {
+			text-align: right;
+		}
+
+		a {
+			display: block;
+			padding: 0 30px;
+			margin-right: -15px;
+			margin-left: -15px;
+			text-decoration: none;
+			color: $brand-dark;
+			height: 0;
+			overflow: hidden;
+			transition-duration: .25s;
+			@include media-breakpoint-up(sm) {
+				display: inline-block;
+				vertical-align: top;
+				padding: 0 ms(1);
+				margin: 0;
+				height: auto;
+			}
+			@include media-breakpoint-only(md) {
+				padding: 0 ms(0);
+			}
+			&.is-visible {
+				height: 50px;
+			}
+			&:hover,
+			&.active {
+				background-color: rgba(white, .5);
+			}
+			&.toggler {
+				display: block;
+				height: auto;
+				opacity: .75;
+				text-align: right;
+				@include media-breakpoint-up(sm) {
+					display: none;
+				}
+				svg {
+					position: relative;
+					top: .3em;
+					width: 1.25em;
+					height: 1.25em;
+				}
+			}
+		}
+	}
+}
+
+.hero {
+	position: relative;
+	height: auto;
+	padding-top: calc(7vmax + 160px);
+	padding-bottom: 10vmax;
+	background-image: url(../images/hero.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	@include media-breakpoint-up(md) {
+		height: 100vh;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&__shade {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(white, .65);
+		z-index: 1;
+	}
+	&__title {
+		text-align: center;
+		font-weight: 400;
+		font-size: ms(5);
+		@include media-breakpoint-up(md) {
+			font-size: ms(8);
+			padding-top: 30vh;
+		}
+		p {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: 1.4;
+			z-index: 10;
+			.border {
+				content: '';
+				position: absolute;
+				bottom: 0; left: 0;
+				display: block;
+				height: .5em;
+				width: 100%;
+				background-color: $brand-blue;
+				z-index: -1;
+				opacity: .5;
+				@include media-breakpoint-up(md) {
+					left: -1.3em;
+					width: 120%;
+				}
+				@include media-breakpoint-down(md) {
+					left: -1.3em;
+					width: 120%;
+				}
+				&.aos-animate {
+					opacity: .5;
+				}
+			}
+			&.last {
+				.border {
+					width: 100%;
+					background-color: $brand-red;
+					left: 0;
+					@include media-breakpoint-up(md) {
+						left: 1.2em;
+					}
+				}
+			}
+		}
+	}
+}
+
+.doctors {
+	position: relative;
+	.container {
+		margin-top: ms(5);
+	}
+	&__bg {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		background-image: url(../images/doctors_bg.jpg);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		z-index: -1;
+		filter: blur(6px) opacity(8%);
+	}
+	&__columns {
+		@include media-breakpoint-up(md) {
+			column-width: 50%;
+			column-count: 2;
+		}
+	}
+	&__item {
+		display: block;
+		font-size: ms(3);
+		@include media-breakpoint-up(md) {
+			padding: 0 ms(-1);
+			font-size: ms(5);
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: baseline;
+			overflow: hidden;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 95%;
+				left: -100%;
+				width: calc(100% - .7em);
+				height: 2px;
+				background-color: darken($brand-blue, 0);
+				transition-duration: .2s;
+			}
+			&:hover {
+				text-decoration: none;
+				color: $brand-red;
+				&:after {
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+.price {
+	font-size: ms(2);
+	@include media-breakpoint-up(md) {
+		font-size: ms(4);
+	}
+}
+
+.accordeon {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	&-tab {
+		position: relative;
+		cursor: pointer;
+		z-index: 1;
+		&:not(:first-of-type) {
+			margin-top: -1px;
+		}
+		&:hover {
+			z-index: 2;
+			.accordeon-tab {
+				&__header {
+					border-color: lighten($brand-blue, 20);
+					background-color: lighten($brand-blue, 30);
+					&:after {
+						color: white;
+						background-color: $brand-blue;
+					}
+				}
+			}
+		}
+		&.is-active {
+			.accordeon-tab {
+				&__header {
+					border-color: lighten($brand-blue, 20);
+					background-color: lighten($brand-blue, 25);
+					&:after {
+						content: '-';
+						color: white;
+						background-color: $brand-blue;
+					}
+				}
+				&__content {
+					max-height: 2000px;
+				}
+			}
+		}
+		&__header {
+			position: relative;
+			display: block;
+			border: 1px solid lighten($brand-blue, 25);
+			background-color: lighten($brand-blue, 35);
+			padding: ms(-2);
+			padding-right: calc(2em);
+			@include media-breakpoint-up(md) {
+				padding-left: ms(2);
+				padding-right: ms(2);
+			}
+			&:after {
+				content: '+';
+				position: absolute;
+				top: 50%; transform:translateY(-50%);
+				right: ms(-2);
+				color: white;
+				background-color: lighten($brand-blue, 20);
+				line-height: 1.2em;
+				font-weight: 700;
+				width: 1.2em;
+				height: 1.2em;
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					right: ms(2);
+				}
+			}
+		}
+		&__content {
+			overflow: hidden;
+			max-height: 0;
+			transition: max-height .5s;
+			&-inner {
+				padding-top: ms(2);
+				padding-bottom: ms(2);
+			}
+		}
+	}
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	tr {
+		&:nth-child(even) {
+			td {
+				background-color: lighten($brand-light, 10);
+			}
+		}
+	}
+	th,
+	td {
+		padding: ms(-4) ms(-2);
+		@include media-breakpoint-up(md) {
+			padding: ms(-2) ms(2);
+		}
+		&:last-of-type {
+			text-align: right;
+		}
+	}
+	th {
+		color: darken($brand-light, 15);
+		font-weight: 400;
+		border-bottom: 2px solid $brand-light;
+		white-space: nowrap;
+	}
+	td {
+		vertical-align: top;
+	}
+}
+
+.about {
+	position: relative;
+	font-size: ms(2);
+	@include media-breakpoint-up(md) {
+		font-size: ms(3);
+	}
+	&__bg {
+		@extend .doctors__bg;
+		background-image: url(../images/hospital-facade.jpg);
+		filter: blur(4px) opacity(15%);
+	}
+}
+
+.contacts {
+	&__contacts {
+		font-size: ms(2);
+		@include media-breakpoint-up(md) {
+			font-size: ms(3);
+		}
+		p,
+		a {
+			position: relative;
+			display: block;
+			padding-left: 1.75em;
+			margin: ms(4) 0;
+		}
+		svg {
+			position: absolute;
+			left: 0; top: 0;
+			width: 1.85em;
+			height: 1.85em;
+			opacity: .25;
+		}
+	}
+	&__map {
+		iframe {
+			width: 100%;
+			height: 450px;
+		}
+	}
+}
+
+.footer {
+	background-color: $brand-dark;
+	color: white;
+}
+
+.up {
+	display: none;
+	width: 3.5rem; height: 3.5rem;
+	position: fixed;
+	bottom: 4%;
+	right: 2%;
+	z-index: 2000;
+	opacity: .35;
+	@include media-breakpoint-up(md) {
+		right: 1%;
+		bottom: 10%;
+		width: 4rem; height: 4rem;
+		opacity: .35;
+	}
+	&:hover {
+		opacity: .75;
+	}
+	&:active {
+		opacity: .5;
+	}
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

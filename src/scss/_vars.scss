@@ -1,0 +1,12 @@
+// colors
+$brand-red:   tomato;
+$brand-blue:  #41EAD4;
+$brand-dark:  #114B5F;
+$brand-light: #dee2e6;
+
+// sixes
+$topbar-height: 50px;
+
+@mixin box-shadow {
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+}

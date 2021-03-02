@@ -1,0 +1,22 @@
+{
+  "name": "happy-family",
+  "version": "0.1.2",
+  "homepage": "",
+  "authors": [
+    "mr. Floster <mr.floster@yahoo.com>"
+  ],
+  "description": "Website for Medical Company 'Happy Family'",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "breakpoint-sass": "^2.7.1",
+    "modular-scale": "^3.0.4",
+    "fontisto": "^3.0.4",
+    "aos": "^2.3.0",
+    "remodal": "^1.1.1"
+  }
+}

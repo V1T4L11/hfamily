@@ -1,0 +1,261 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="topbar" id="top"> <!-- start .topbar -->
+	<div class="container">
+		<div class="row"> <!-- start .section__inner -->
+			<div class="topbar__logo col-12 col-md-5"> <!-- start .topbar__logo -->
+				<a class="topbar__logo-wrapper" href="#">
+					<h1>Медичний центр <strong>"Здорова сім'я"</strong></h1>
+					<p>
+						<svg class="icon icon-place"><use xlink:href="#icon-place"></use></svg>
+						Хмельницький, вул. Лісогринівецька 16/1
+					</p>
+					<p>
+						<svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+						(098) 358 18 19
+					</p>
+				</a>
+			</div> <!-- end .topbar__logo -->
+			<nav class="topbar__nav col-12 col-md-7"> <!-- start .topbar__nav -->
+				<a href="#" class="toggler" id="menuToggler"><svg><use xlink:href="#icon-menu"></use></svg></a>
+				{% for hash, name in menu %}
+					<a href="#{{ hash }}">{{ name }}</a>
+				{% endfor %}
+			</nav> <!-- end .topbar__nav -->
+		</div>
+	</div>
+</section> <!-- end .topbar -->
+
+ <!-- START .hero -->
+<section class="hero">
+	<div class="hero__shade"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="hero__title">
+					<p class="first">Сімейна лікарня
+						<span class="border" data-aos="slide-left" data-aos-duration="1000"></span>
+					</p><br>
+					<p class="last">по доступним цінам
+						<span class="border" data-aos="slide-right" data-aos-duration="1000"></span>
+					</p>
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END .hero -->
+
+ <!-- START .doctors -->
+<section class="doctors section" id="doctors">
+	<header class="col-12 section__header section__header--right">
+		<h2 class="section__title" data-aos="slide-left" data-aos-duration="500" data-aos-once="true">Наші послуги</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-11 offset-md-1 doctors__columns">
+				{% for hash, name in doctors %}
+					<div class="doctors__item">
+						<!-- <svg><use xlink:href="#icon-medicine"></use></svg> -->
+						<a href="#{{ hash }}">
+							{{ name }} &raquo;
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="doctors__bg"></div>
+</section>
+<!-- END .doctors -->
+
+ <!-- START .price -->
+<section class="price section" id="price">
+	<header class="col-12 section__header section__header--left">
+		<h2 class="section__title" data-aos="slide-right" data-aos-duration="500" data-aos-once="true">Ціни на послуги</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<ul class="accordeon">
+					<li class="accordeon-tab">
+						<div class="accordeon-tab__header">
+							<span>Загальноклінічні послуги</span>
+						</div>
+						<div class="accordeon-tab__content">
+							<div class="accordeon-tab__content-inner">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Послуга</th>
+											<th>Вартість, грн.</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for name, price in services %}
+										<tr>
+												<td>{{ name }}</td>
+												<td>{{ price }}</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li class="accordeon-tab">
+						<div class="accordeon-tab__header">
+							<span>Додаткові лаборантні процедури</span>
+						</div>
+						<div class="accordeon-tab__content">
+							<div class="accordeon-tab__content-inner">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Послуга</th>
+											<th>Вартість, грн.</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for name, price in services %}
+										<tr>
+												<td>{{ name }}</td>
+												<td>{{ price }}</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li class="accordeon-tab">
+						<div class="accordeon-tab__header">
+							<span>Діагностичні та інструментальні послуги</span>
+						</div>
+						<div class="accordeon-tab__content">
+							<div class="accordeon-tab__content-inner">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Послуга</th>
+											<th>Вартість, грн.</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for name, price in services %}
+										<tr>
+												<td>{{ name }}</td>
+												<td>{{ price }}</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!--
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Послуга</th>
+							<th>Вартість, грн.</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for name, price in services %}
+						<tr>
+								<td>{{ name }}</td>
+								<td>{{ price }}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			-->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END .price -->
+
+ <!-- START .about -->
+<section class="about section" id="about">
+	<header class="col-12 section__header section__header--right">
+		<h2 class="section__title" data-aos="slide-left" data-aos-duration="500" data-aos-once="true">Про Нас</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-10 offset-md-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, earum dolore suscipit debitis tempore architecto saepe fugiat dolores cupiditate iste quam enim, impedit perspiciatis modi. Eos est harum debitis ducimus!</p>
+			</div>
+		</div>
+	</div>
+	<div class="about__bg"></div>
+</section>
+<!-- END .about -->
+
+ <!-- START .contacts -->
+<section class="contacts section" id="contacts">
+	<header class="col-12 section__header section__header--left">
+		<h2 class="section__title" data-aos="slide-right" data-aos-duration="500" data-aos-once="true">Контакти</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-4 contacts__contacts">
+				<p>
+					<svg class="icon icon-place"><use xlink:href="#icon-place-r"></use></svg>
+					Хмельницький, вул.&nbsp;Лісогринівецька&nbsp;16/1
+				</p>
+				<p>
+					<svg class="icon icon-phone"><use xlink:href="#icon-phone-r"></use></svg>
+					(098) 358 18 19
+				</p>
+				<a href="mailto:healthy.family.hm@gmail.com">
+					<svg class="icon icon-email"><use xlink:href="#icon-email-r"></use></svg>
+					healthy.family.hm@gmail.com
+				</a>
+			</div>
+			<div class="col-12 col-md-8 contacts__map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.4153292103133!2d27.00821515088199!3d49.45776656616952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47320770ea5ed507%3A0xc73a4b432a93d722!2sLisohrynivets%CA%B9ka+Vulytsya%2C+16%2C+Khmel&#39;nyts&#39;kyi%2C+Khmel&#39;nyts&#39;ka+oblast%2C+29000!5e0!3m2!1sen!2sua!4v1527844232858" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END .contacts -->
+
+<footer class="footer"> <!-- start .footer -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<p>&copy; Медичний центр <strong>"Здорова сім'я"</strong>, 2018</p>
+			</div>
+		</div>
+	</div>
+</footer> <!-- end .footer -->
+
+<a href="#top" class="up"><svg><use xlink:href="#icon-up"></use></svg></a>
+
+{% macro remodal(target, title, text) %}
+<div class="remodal" data-remodal-id="{{ target }}">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>{{ title }}</h1>
+  <p>
+    {{ text }}
+  </p>
+  <!-- <br> -->
+  <!-- <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button> -->
+  <!-- <button data-remodal-action="confirm" class="remodal-confirm">OK</button> -->
+</div>
+{% endmacro %}
+
+{% for target, title, text in doctors %}
+{{ remodal(target, title, text) }}
+{% endfor %}
+
+{% endblock %}

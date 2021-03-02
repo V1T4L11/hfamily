@@ -1,0 +1,42 @@
+{
+    "page": {
+        "title": "Медичний центр \"Здорова сім'я\""
+    },
+    "contacts": {
+        "phone": ["067-111-11-11", "097-111-11-11"],
+        "email": ["sale@postelnoe-belie.com.ua ", "info@postelnoe-belie.com.ua "]
+    },
+    "title": "Sample page title",
+    "menu": {
+    	"about": "Про нас",
+    	"doctors": "Послуги",
+    	"price": "Ціни",
+    	"contacts": "Контакти"
+    },
+    "doctors": [
+    	["doctor_01", "Педіатр", "Педіатр Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_02", "Сімейний лікар", "Сімейний лікар Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_03", "Дерматолог", "Дерматолог Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_04", "Масажний кабінет", "Масажний кабінет Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_05", "Дитячий масаж", "Дитячий масаж Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_06", "Невропатолог", "Невропатолог Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_07", "Ортопед-травматолог", "Ортопед-травматолог Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_08", "Лабораторна діагонстика", "Лабораторна діагонстика Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"],
+    	["doctor_09", "Денний стаціонар", "Денний стаціонар Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit provident laboriosam voluptates, laborum accusamus, eaque facilis voluptatibus quia minus, ratione a error minima sed expedita, quod at quidem? Fuga, saepe!"]
+    ],
+    "services": {
+        "Первинне лікарське обстеження госпіталізованого хворого пацієнта": "128",
+        "Вимірювання артеріального тиску": "5",
+        "Визначення частоти пульсу": "безкошт.",
+        "Антропометрія": "8",
+        "Ін'єкція лікарських речовин підшкірно, внутрішньом'язово": "17",
+        "Ін'єкція лікарських речовин внутрішньовенна струменна": "67",
+        "Внутрішньовенне крапленне введення лікарських речовин": "81",
+        "Пункційна катетеризація підключеної вени": "814",
+        "Пункційна катетеризація артерії": "147",
+        "Інтубація і декомпресія шлунка": "53",
+        "Визначення кількості еритроцитів": "32",
+        "Підрахунок кількості лейкоцитів": "28",
+        "Визначення кількості тромбоцитів": "32"
+    }
+}

@@ -1,0 +1,53 @@
+@mixin ff-base() {
+  font-family: $ff-base;
+}
+
+@mixin v-align() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin h-align() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin span($width: 1) {
+  flex-basis: span($width);
+  min-width: span($width);
+  padding: 0 (gutter() / 2);
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') { @content; }
+  @include optional-at-root(':-moz-placeholder') { @content; }
+  @include optional-at-root('::-moz-placeholder') { @content; }
+  @include optional-at-root(':-ms-input-placeholder') { @content; }
+}
+// Usage
+// .foo {
+//   @include placeholder {
+//     color: green;
+//   }
+// }
+
+// @include placeholder {
+//   color: red;
+// }
